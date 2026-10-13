@@ -27,3 +27,10 @@
 @media(max-width:360px){.header>.wordmark{width:103px}.header>.wordmark img{width:103px;height:103px;top:-17px}}
 .menu-status{white-space:nowrap}.menu-button{flex-shrink:0}
 @media(max-width:360px){.header .menu-button{padding-inline:9px;gap:5px}.header{grid-template-columns:1fr 103px 1fr}}
+
+/* Use the larger original artwork; preserve one menu-button box in both states. */
+html{scrollbar-gutter:stable}.header>.wordmark{display:grid;place-items:center;overflow:visible;mix-blend-mode:screen}.header>.wordmark img{position:static;width:170px;height:auto;filter:grayscale(1) invert(1) brightness(3)}
+.header .menu-button,.menu-open .header .menu-button{position:relative;top:auto;left:auto;width:130px;height:44px;justify-content:center;box-sizing:border-box}.menu-word{white-space:nowrap}.menu-status{flex-shrink:0}
+@media(max-width:760px){.header>.wordmark img{width:120px}.header .menu-button,.menu-open .header .menu-button{width:96px;height:38px;padding:7px;gap:6px}}
+@media(max-width:360px){.header{grid-template-columns:96px 103px 1fr}.header>.wordmark img{width:103px}}
+.header{z-index:auto}.header>.wordmark img{mix-blend-mode:screen}
