@@ -36,3 +36,15 @@ final result: passed
 
 ## Follow-up
 The authenticated GitHub account has READ permission on RazmahDM/acor. Implementation is committed locally; production publishing is separate from this preview handoff.
+
+## Motion and navigation revision — 2026-10-13
+User requested a more creative menu, textured background, removal of arrows, parallax and additional animation.
+- Generated purple glass/satin background at img/purple-atmosphere.webp. New hero foreground uses generated transparent product with a contour display mask to suppress generation-edge debris.
+- Fullscreen pale-lilac navigation with numbered editorial links, sequential reveal, inert closed state, Escape handling, keyboard focus cycle and mobile scroll support.
+- Removed all arrow imagery from rendered page. CTA feedback now uses a small expanding dot and color/underline transitions.
+- Scroll parallax updates three CSS transform variables in a single requestAnimationFrame; disabled below 761px and for reduced motion. Section reveals use IntersectionObserver and are visible without JS.
+- Final hero evidence: /tmp/acor-motion-hero.png (1280 × 720). Mobile menu evidence: /tmp/acor-menu-v2.png (390 × 844).
+- Browser checks: widths 320, 390, 768, 1024, 1440 have no horizontal overflow, no broken images and zero arrow image elements. Menu Tab moves to first menu link; Escape closes; choosing first link closes and reaches #products. At scrollY 1544.5 the background shift is 181.56px and six reveal targets are visible. Console errors: none.
+- Visual checks: product rectangle removed, no caption/text collisions; menu text fits mobile. Requested dark violet background is an intentional change from the original flat-purple composition.
+- Remaining P0/P1/P2 issues: none.
+- final result: passed
